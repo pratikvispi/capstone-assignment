@@ -1,0 +1,133 @@
+  
+<h1 class="mt-4" style="text-align: center;font-weight: bold;color: brown; font-size: 100px;">NU Infirmary</h1><br><br>
+<p class="lead mb-3" style="font-size: 50px;text-align: center;text-decoration: underline;font-weight: bold;">
+    Welcome Dr.  <%= name %>
+</p>
+<br>
+<script>
+  var d = Date(Date.now()); 
+  b=d.ge
+  a=d.toString()
+  res = a.slice(0,24);
+  year=a.slice(11,15)
+  date=a.slice(8,11)
+  month= a.slice(4,8)
+  // document.write(res)
+ 
+  // document.write(date)
+  // document.write(month)
+  document.write("Date: "+date+" "+month+" "+year)
+</script>
+<br><br>
+<form action="/dashboard" method="POST">
+ 
+    <div class="form-group">
+      <label for="rollno">Enrollment Number</label>
+      <input
+        required
+        type="text"
+        id="rollno"
+        name="rollno"
+        class="form-control"
+        placeholder="Enter Enrollment Number"
+        
+      />
+    </div>
+    <div class="form-group">
+      <button type="search">
+        Search
+      </button>
+    </div>
+  
+  
+
+  
+
+  <div class="form-group">
+    <label for="name">Patient's Name</label>
+    <input required
+      type="text"
+      id="name"
+      name="name"
+      class="form-control"
+      placeholder="Enter Patient's Name"
+      
+    />
+  </div>
+ 
+  <div class="form-group">
+    <label for="age">Age</label>
+    <input required
+      type="number"
+      id="age"
+      name="age"
+      class="form-control"
+      placeholder="Enter Age"
+      
+    />
+  </div>
+  <div class="form-group">
+    <label for="gender"><pre class="tab">Gender:</pre></label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
+    <input type="radio" id="other" name="gender" value="other">
+    <label for="other">Other</label>
+  </div>
+
+  <!-- <div class="form-group">
+    <label for="eval">Illness/Disease</label>
+    <input
+      type="text"
+      id="eval"
+      name="eval"
+      class="form-control"
+      placeholder="Enter Preliminary Evaluation"
+      
+    />
+  </div> -->
+  <div class="form-group">
+    <label for="symptoms">Symptoms: </label><br>
+    <textarea name="symptoms" id= "symptoms" rows="5" cols="130" required></textarea>
+  </div>
+  <!-- <div class="form-group">
+    <label for="presc">Prescription</label>
+    <input
+      type="text"
+      id="presc"
+      name="eval"
+      class="form-control"
+      placeholder="Enter Prescription of Medicines"
+      
+    />
+  </div> -->
+  <div class="form-group">
+    <label for="psr">Prescription: </label><br>
+    <textarea  required name="psr" id ="psr" rows="10" cols="130"></textarea>
+    
+  </div>
+  
+  <button type="submit" id="ss" class="btn btn-primary btn-block" >
+    Submit and Save
+  </button>
+  <!-- <button type="print" id= "ps" class="btn btn-primary btn-block">
+    Print and Save
+  </button> -->
+</form>
+<br>
+<br>
+
+
+
+          
+     
+
+
+
+
+
+
+<footer style="text-align:center ;">
+    <a href="/users/logout" class="btn btn-secondary" >Logout</a>
+</footer>
